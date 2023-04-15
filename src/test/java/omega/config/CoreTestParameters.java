@@ -31,10 +31,12 @@ public class CoreTestParameters {
 	
 	public void setTestParam(String key, String value) {
 		configurationProperties.put(key, value);
+		commit();
 	}
 	
 	public void deleteTestParam(String key) {
 		configurationProperties.remove(key);
+		commit();
 	}
 	
 	public void containsKey(String key) {
@@ -52,6 +54,9 @@ public class CoreTestParameters {
 	
 	public void setProperty(String key, String value) {
 		configurationProperties.setProperty(key, value);
+		commit();
+	}
+	public void commit() {
 		try (final OutputStream outputstream = new FileOutputStream(System.getProperty("user.dir")+"\\src\\main\\resources\\application.properties");){
 			configurationProperties.store(outputstream, "File Updated");
 			outputstream.close();
