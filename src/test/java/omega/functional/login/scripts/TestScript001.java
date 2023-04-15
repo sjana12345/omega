@@ -8,7 +8,7 @@ import omega.functional.login.Login;
 public class TestScript001 extends BaseTest {
 
 	@Override
-	@Test(suiteName = "Omega", testName = "Login Scenario")
+	@Test(suiteName = "Omega Suite", testName = "Login Scenario")
 	public void runScript() {
 		executeTest();
 		launchBaseUrl();
