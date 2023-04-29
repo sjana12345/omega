@@ -9,6 +9,7 @@ public class TestScript001 extends BaseTest {
 
 	@Override
 	@Test(suiteName = "Omega Suite", testName = "Login Scenario")
+	//Author-Supratik
 	public void runScript() {
 		executeTest();
 		launchBaseUrl();
