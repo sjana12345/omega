@@ -13,8 +13,8 @@ public class CommonPageObj {
 	WebDriver driver;
 	BaseTest test;
 	
-	@FindBy(how = How.XPATH, using = "//div[@class='login_main_div']")
-	public WebElement loginConatainer;
+	@FindBy(how = How.XPATH, using = "//div[@class='signin-cont']")
+	public WebElement loginContainer;
 	@FindBy(how = How.XPATH, using = "//h3[@class='new_title_text']")
 	public WebElement loginTitleText;
 	@FindBy(how = How.XPATH, using = "//p[@class='new_Sub_Title_text']")

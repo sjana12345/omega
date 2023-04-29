@@ -3,7 +3,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-!**/src/test/**/test-output/
+!**/src/test/**/test-output/**
 
 ### STS ###
 .apt_generated
@@ -32,3 +32,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Ignore the node_modules directory
+test-output/**

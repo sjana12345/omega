@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.testng.Reporter;
 
 import omega.functional.login.pageobjects.CommonPageObj;
+import omega.utils.Se;
 import omega.utils.SeGenericFunctions;
 
 public class LoginPage extends CommonPageObj{
@@ -20,35 +21,13 @@ public class LoginPage extends CommonPageObj{
 		super(driver);
 	}
 	
-	public boolean checkLoginPageTitleText() {
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+public boolean checkLoginContainer() {
 		
-		if(loginTitleText.isDisplayed()) {
-			Reporter.log(loginTitleText.toString());
+		Se.waitforExistence(Se.getlocator(loginContainer), 30);
+		if(loginContainer.isDisplayed()) {
 			return true;
 		}
 		return false;
-	}
-	
-	public void performLogin() {
-		SeGenericFunctions.sleep(220);
-//		SeGenericFunctions.Jsfunc("alert('test')");
-		SeGenericFunctions.waitforExistence(By.xpath("//h3[@class='new_title_text']"), 20);
-		logger.debug("Waiting");
-		mobileNumber.sendKeys("9804557370");
-		logger.debug("Waiting");
-		toggleLogin.click();
-		logger.debug("Waiting");
-		password.sendKeys("12345678");
-		logger.debug("Waiting");
-		loginButton.click();
-		
-//		SeGenericFunctions.sleep(50);
 	}
 
 }

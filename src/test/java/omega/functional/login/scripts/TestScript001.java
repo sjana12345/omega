@@ -13,7 +13,7 @@ public class TestScript001 extends BaseTest {
 		executeTest();
 		launchBaseUrl();
 		Login login=new Login();
-		login.perforLogin();
+		login.verifyLoginContainer();
 		stopTest();
 	}
 
