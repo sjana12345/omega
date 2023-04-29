@@ -1,5 +1,6 @@
 package omega.functional.login.scripts;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import omega.base.BaseTest;
@@ -15,6 +16,10 @@ public class TestScript001 extends BaseTest {
 		launchBaseUrl();
 		Login login=new Login();
 		login.verifyLoginContainer();
+	}
+	
+	@AfterClass
+	public void close_browser()    {
 		stopTest();
 	}
 

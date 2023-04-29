@@ -28,32 +28,41 @@ public class Se {
 	}
 
 	public static void waitforExistence(By element, int sec) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(sec));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(sec));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+		} catch (Exception e) {
+			Report.capture();
+		}
+		
 	}
 
 	public static By getlocator(WebElement element) {
-		String[] data = element.toString().split(" -> ")[1].replace("']", "'").split(": ");
-		String locator = data[0];
-		String term = data[1];
-		switch (locator) {
-		case "xpath":
-			return By.xpath(term);
-		case "css selector":
-			return By.cssSelector(term);
-		case "id":
-			return By.id(term);
-		case "tag name":
-			return By.tagName(term);
-		case "name":
-			return By.name(term);
-		case "link text":
-			return By.linkText(term);
-		case "class name":
-			return By.className(term);
+		try {
+			String[] data = element.toString().split(" -> ")[1].replace("']", "'").split(": ");
+			String locator = data[0];
+			String term = data[1];
+			switch (locator) {
+			case "xpath":
+				return By.xpath(term);
+			case "css selector":
+				return By.cssSelector(term);
+			case "id":
+				return By.id(term);
+			case "tag name":
+				return By.tagName(term);
+			case "name":
+				return By.name(term);
+			case "link text":
+				return By.linkText(term);
+			case "class name":
+				return By.className(term);
+			}
+			return (By) element;
+		} catch (Exception e) {
+			Report.capture();
+			return (By) null;
 		}
-		return (By) element;
-
 	}
 
 	public static void action(WebElement element, String actionperformed, String value) {

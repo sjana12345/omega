@@ -26,8 +26,10 @@ public boolean checkLoginContainer() {
 		Se.waitforExistence(Se.getlocator(loginContainer), 30);
 		if(loginContainer.isDisplayed()) {
 			return true;
+		}else {
+			return false;
 		}
-		return false;
+		
 	}
 
 }

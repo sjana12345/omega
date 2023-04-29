@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import omega.config.CoreTestParameters;
 import omega.config.WebdriverConfig;
+import omega.utils.Report;
 
 public abstract class BaseTest extends BaseSettings {
 
@@ -14,12 +15,14 @@ public abstract class BaseTest extends BaseSettings {
 	public void startTest() {
 		configuration=new WebdriverConfig();
 		driver = configuration.getConfig(getProperty("Browser"));
+		Report.reportInit();
 	}
 
 	public void stopTest() {
 		if(driver!=null) {
 			driver.quit();
 		}
+		Report.reportEnd();
 	}
 
 	public void executeTest() {
