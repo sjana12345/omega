@@ -24,7 +24,7 @@ public class WebdriverConfig {
 	public List<String> arguments;
 
 	public WebDriver getConfig(String browser) {
-		List<String> arguments = new ArrayList<>(Arrays.asList("--start-maximized", "--remote-allow-origins=*", "--user-data-dir=" + System.getProperty("java.io.tmpdir")));
+		List<String> arguments = new ArrayList<>(Arrays.asList("--start-maximized", "--remote-allow-origins=*", "--incognito", "--user-data-dir=" + System.getProperty("java.io.tmpdir")));
 		switch (browser) {
 		case "CHROME":
 			WebDriverManager.chromedriver().setup();

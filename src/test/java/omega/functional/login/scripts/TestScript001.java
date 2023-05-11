@@ -12,7 +12,14 @@ public class TestScript001 extends BaseTest {
 		launchBaseUrl();
 		Login login = new Login();
 		login.enterMobilerNumber();
-		
+		login.enterPassword();
+		login.performLogin();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

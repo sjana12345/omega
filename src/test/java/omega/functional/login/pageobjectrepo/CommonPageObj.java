@@ -28,7 +28,7 @@ public class CommonPageObj extends BasePage{
 	public WebElement password;
 	@FindBy(how = How.XPATH, using = "//strong")
 	public WebElement toggleLogin;
-	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Login')]")
+	@FindBy(how = How.XPATH, using = "//button//span[contains(text(),'Login')]")
 	public WebElement loginButton;
 	@FindBy(how = How.XPATH, using = "//li[@class='slide']//img")
 	public WebElement slides;
