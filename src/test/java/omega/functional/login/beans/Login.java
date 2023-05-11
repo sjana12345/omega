@@ -22,4 +22,8 @@ public class Login {
 			Log.info("Fail");
 		}
 	}
+	
+	public void sendOtp() {
+		
+	}
 }
