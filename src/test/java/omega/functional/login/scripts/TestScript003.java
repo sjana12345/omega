@@ -11,7 +11,7 @@ public class TestScript003 extends BaseTest {
 	public void runScript() {
 		launchBaseUrl();
 		Login login = new Login();
-		login.verifyLoginContainer();
+		login.enterMobilerNumber();
 	}
 
 }

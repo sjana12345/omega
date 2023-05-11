@@ -36,3 +36,4 @@ build/
 
 # Ignore the node_modules directory
 test-output/**
+extent-reports/**
