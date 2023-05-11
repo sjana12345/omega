@@ -5,7 +5,6 @@ import org.testng.Assert;
 
 import omega.functional.login.pageobjectrepo.CommonPageObj;
 import omega.utils.logs.Log;
-import static omega.base.BaseSettings.*;
 
 public class LoginPage extends CommonPageObj {
 
