@@ -15,31 +15,11 @@ public class Login {
 	WebDriver driver;
 	LoginPage loginpage = new LoginPage(BaseTest.driver);
 
-	public void enterMobilerNumber() {
-		if (loginpage.enterMobileNumber()) {
-			ExtentTestManager.getTest().log(Status.PASS, "Successfully entered the Mobile Number");
-		} else {
-			ExtentTestManager.getTest().log(Status.FAIL, "Failed to enter the Mobile Number");
-		}
-	}
-	
-	public void enterPassword() {
-		if (loginpage.enterPassword()) {
-			ExtentTestManager.getTest().log(Status.PASS, "Successfully entered the Password");
-		} else {
-			ExtentTestManager.getTest().log(Status.FAIL, "Failed to enter the Password");
-		}
-	}
-	
 	public void performLogin() {
-		if (loginpage.performLogin()) {
-			ExtentTestManager.getTest().log(Status.PASS, "Successfully clicked on login button");
+		if (loginpage.enterMobileNumber()&&loginpage.enterPassword()&&loginpage.performLogin()) {
+			ExtentTestManager.getTest().log(Status.PASS, "Successfully Logged in");
 		} else {
-			ExtentTestManager.getTest().log(Status.FAIL, "Failed to click on login button");
+			ExtentTestManager.getTest().log(Status.FAIL, "Failed to Login");
 		}
-	}
-	
-	public void sendOtp() {
-		
 	}
 }

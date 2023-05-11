@@ -11,8 +11,6 @@ public class TestScript001 extends BaseTest {
 	public void runScript() {
 		launchBaseUrl();
 		Login login = new Login();
-		login.enterMobilerNumber();
-		login.enterPassword();
 		login.performLogin();
 		try {
 			Thread.sleep(3000);
