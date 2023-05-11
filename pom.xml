@@ -16,7 +16,15 @@
 	<description>Omega Automation Framework</description>
 	<properties>
 		<java.version>11</java.version>
+		<extentreports-version>5.0.8</extentreports-version>
+		<log4j-version>2.19.0</log4j-version>
 	</properties>
+	<repositories>
+		<repository>
+			<id>aventstack-repo</id>
+			<url>https://repo.aventstack.com/artifactory/ext-release-local/</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,21 +41,21 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.4.0</version>
+			<version>4.0.0-rc-2</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-chrome-driver</artifactId>
-			<version>4.4.0</version>
+			<version>4.0.0-rc-2</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-firefox-driver</artifactId>
-			<version>4.4.0</version>
+			<version>4.0.0-rc-2</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
@@ -57,26 +65,27 @@
 			<version>2.20.0</version>
 			<scope>test</scope>
 		</dependency>
+		
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-safari-driver</artifactId>
-			<version>4.4.0</version>
+			<version>4.0.0-rc-2</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edge-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-edge-driver</artifactId>
-			<version>4.4.0</version>
+			<version>4.0.0-rc-2</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-ie-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-ie-driver</artifactId>
-			<version>4.4.0</version>
+			<version>4.0.0-rc-2</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -89,7 +98,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.7.0</version>
+			<version>7.7.1</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/xml-apis/xml-apis -->
@@ -104,11 +113,16 @@
 			<artifactId>chatgpt</artifactId>
 			<version>1.0.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 		<dependency>
-			<groupId>com.relevantcodes</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>2.41.2</version>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreports-version}</version>
+        </dependency>
+		<!--https://mvnrepository.com/artifact/io.netty/netty-handler-->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-handler</artifactId>
+			<version>4.1.90.Final</version>
 		</dependency>
 	</dependencies>
 

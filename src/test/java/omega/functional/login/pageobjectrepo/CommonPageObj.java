@@ -1,4 +1,4 @@
-package omega.functional.login.pageobjects;
+package omega.functional.login.pageobjectrepo;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,9 +6,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
+import omega.base.BasePage;
 import omega.base.BaseTest;
 
-public class CommonPageObj {
+public class CommonPageObj extends BasePage{
 	
 	WebDriver driver;
 	BaseTest test;
@@ -29,8 +30,14 @@ public class CommonPageObj {
 	public WebElement toggleLogin;
 	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Login')]")
 	public WebElement loginButton;
+	@FindBy(how = How.XPATH, using = "//li[@class='slide']//img")
+	public WebElement slides;
+	@FindBy(how = How.XPATH, using = "//img")
+	public WebElement img;
+	
 	
 	public CommonPageObj(WebDriver driver) {
+		super(driver);
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}

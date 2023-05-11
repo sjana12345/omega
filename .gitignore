@@ -4,6 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 !**/src/test/**/test-output/**
+!**/src/test/**/extent-reports/**
 
 ### STS ###
 .apt_generated

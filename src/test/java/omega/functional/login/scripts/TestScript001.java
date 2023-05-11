@@ -1,26 +1,18 @@
 package omega.functional.login.scripts;
 
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import omega.base.BaseTest;
-import omega.functional.login.Login;
-
+import omega.functional.login.beans.Login;
+@Listeners(omega.utils.listener.TestListener.class)
 public class TestScript001 extends BaseTest {
 
-	@Override
-	@Test(suiteName = "Omega Suite", testName = "Login Scenario")
-	//Author-Supratik
+	@Test(suiteName = "Omega Suite", testName = "Scenario 1")
 	public void runScript() {
-		executeTest();
 		launchBaseUrl();
-		Login login=new Login();
-		login.verifyLoginContainer();
-	}
-	
-	@AfterClass
-	public void close_browser()    {
-		stopTest();
+		Login login = new Login();
+		login.enterMobilerNumber();
+		
 	}
 
 }

@@ -3,9 +3,11 @@ package omega.config;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -22,7 +24,7 @@ public class WebdriverConfig {
 	public List<String> arguments;
 
 	public WebDriver getConfig(String browser) {
-		List<String> arguments = new ArrayList<>(Arrays.asList("--start-maximized", "--remote-allow-origins=*"));
+		List<String> arguments = new ArrayList<>(Arrays.asList("--start-maximized", "--remote-allow-origins=*", "--user-data-dir=" + System.getProperty("java.io.tmpdir")));
 		switch (browser) {
 		case "CHROME":
 			WebDriverManager.chromedriver().setup();
