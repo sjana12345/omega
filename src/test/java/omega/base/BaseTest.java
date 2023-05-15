@@ -52,8 +52,8 @@ public abstract class BaseTest extends BaseSettings {
 		}
 	}
 
-	public void launchBaseUrl() {
-		String url = getProperty("Url");
+	public void launchBaseUrl(String urlProp) {
+		String url = getProperty(urlProp);
 		if (!url.isBlank()) {
 			driver.get(url);
 			try {
@@ -66,18 +66,7 @@ public abstract class BaseTest extends BaseSettings {
 		}
 	}
 	
-	public void launchBaseCustomerUrl() {
-		String CustomerUrl= getProperty("CustomerUrl");
-		if(!CustomerUrl.isBlank()) {
-			driver.get(CustomerUrl);
-			try {
-				Thread.sleep(2000);
-			}catch(InterruptedException e) {
-				e.printStackTrace();
-			}
-			setProperty("TestStatus", "Running");
-		}
-	}
+	
 
 	public abstract void runScript();
 }

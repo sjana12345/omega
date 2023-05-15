@@ -10,7 +10,7 @@ public class TestScript001 extends BaseTest {
 
 	@Test(suiteName = "Omega Suite", testName = "Scenario 1")
 	public void runScript() {
-		launchBaseUrl();
+		launchBaseUrl("Url");
 		Login login = new Login();
 		Home home=new Home();
 		login.performLogin();
