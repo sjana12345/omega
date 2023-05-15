@@ -65,6 +65,19 @@ public abstract class BaseTest extends BaseSettings {
 			setProperty("TestStatus", "Running");
 		}
 	}
+	
+	public void launchBaseCustomerUrl() {
+		String CustomerUrl= getProperty("CustomerUrl");
+		if(!CustomerUrl.isBlank()) {
+			driver.get(CustomerUrl);
+			try {
+				Thread.sleep(2000);
+			}catch(InterruptedException e) {
+				e.printStackTrace();
+			}
+			setProperty("TestStatus", "Running");
+		}
+	}
 
 	public abstract void runScript();
 }
