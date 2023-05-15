@@ -65,8 +65,9 @@ public abstract class BaseTest extends BaseSettings {
 			setProperty("TestStatus", "Running");
 		}
 	}
-	
-	
+	public void navigate(String path) {
+		driver.get(getProperty("Url")+path);
+	}
 
 	public abstract void runScript();
 }

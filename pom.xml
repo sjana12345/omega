@@ -18,6 +18,8 @@
 		<java.version>11</java.version>
 		<extentreports-version>5.0.8</extentreports-version>
 		<log4j-version>2.19.0</log4j-version>
+		<!-- <selenium-version>4.0.0-rc-2</selenium-version>-->
+		<selenium-version>4.0.0-rc-3</selenium-version>
 	</properties>
 	<repositories>
 		<repository>
@@ -41,21 +43,21 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.0.0-rc-2</version>
+			<version>${selenium-version}</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-chrome-driver</artifactId>
-			<version>4.0.0-rc-2</version>
+			<version>${selenium-version}</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-firefox-driver</artifactId>
-			<version>4.0.0-rc-2</version>
+			<version>${selenium-version}</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
@@ -65,27 +67,27 @@
 			<version>2.20.0</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-safari-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-safari-driver</artifactId>
-			<version>4.0.0-rc-2</version>
+			<version>${selenium-version}</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-edge-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-edge-driver</artifactId>
-			<version>4.0.0-rc-2</version>
+			<version>${selenium-version}</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-ie-driver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-ie-driver</artifactId>
-			<version>4.0.0-rc-2</version>
+			<version>${selenium-version}</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -114,10 +116,10 @@
 			<version>1.0.1</version>
 		</dependency>
 		<dependency>
-            <groupId>com.aventstack</groupId>
-            <artifactId>extentreports</artifactId>
-            <version>${extentreports-version}</version>
-        </dependency>
+			<groupId>com.aventstack</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extentreports-version}</version>
+		</dependency>
 		<!--https://mvnrepository.com/artifact/io.netty/netty-handler-->
 		<dependency>
 			<groupId>io.netty</groupId>

@@ -18,9 +18,9 @@ public class Home {
 
 	public void verifyLogin() {
 		if (homepage.verifyLogin()) {
-			ExtentTestManager.getTest().log(Status.PASS, "Successfully Logged in");
+			ExtentTestManager.getTest().log(Status.PASS, "Login Verified");
 		} else {
-			ExtentTestManager.getTest().log(Status.FAIL, "Failed to Login");
+			ExtentTestManager.getTest().log(Status.FAIL, "Login Verification failed");
 		}
 	}
 }
