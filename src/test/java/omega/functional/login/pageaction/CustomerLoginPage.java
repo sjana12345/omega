@@ -19,6 +19,7 @@ public class CustomerLoginPage extends CommonPageObj{
 			Assert.assertEquals(readText(getlocator(customerLoginTitletext)), "Login / Register");
 			Assert.assertEquals(readText(getlocator(customerLoginSubTitletext)), "Provide your Mobile Number or Email to Login/ Sign Up");
 			if(customerMobileNumber.isDisplayed()) {
+				sendvalue(getlocator(customerMobileNumber),"6290303437", true);
 				waitandWriteText(getlocator(customerMobileNumber),"6290303437");
 				return true;
 			}
@@ -27,6 +28,7 @@ public class CustomerLoginPage extends CommonPageObj{
 	}
 	
 	public boolean performCustomerLogin() {
+		click(getlocator(customerLoginbtn));
 		waitandClick(getlocator(customerLoginbtn));
 		return true;
 	}

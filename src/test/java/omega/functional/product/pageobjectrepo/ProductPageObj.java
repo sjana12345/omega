@@ -1,10 +1,13 @@
 package omega.functional.product.pageobjectrepo;
 
+import org.bouncycastle.pqc.jcajce.provider.rainbow.SignatureSpi.withSha224;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 
 import omega.base.BasePage;
 
@@ -87,18 +90,51 @@ public class ProductPageObj extends BasePage{
 	@FindBy(how = How.XPATH, using = "//div[@class='add-category-product']//parent::div[contains(@class,'MuiDrawer-paper')]")
 	public WebElement categoryDrawer;
 	
-	@FindBy(how = How.XPATH, using = "")
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Add Parent')]")
 	public WebElement addParentCategory;
 	
-	@FindBy(how = How.XPATH, using = "")
+	@FindBy(how = How.XPATH, using = "//li[contains(@class,'lable1_li')]/div/button")
+	public WebElement expandParentCategory;
+	
+	@FindBy(how = How.XPATH, using = "//li[contains(@class,'lable1_li')]//div[@class='product_title']")
+	public WebElement categoryNames;
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Add Child')]")
+	public WebElement addChildCategory;
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Add Sub-Child')]")
+	public WebElement addSubChildCategory;
+	
+	@FindBy(how = How.XPATH, using = "//li[contains(@class,'active_lable')]//li")
+	public WebElement activeCategorylevel;
+	
+	@FindBy(how = How.XPATH, using = "//div[@role='dialog']")
 	public WebElement modalDialog;
 	
-	@FindBy(how = How.XPATH, using = "")
+	@FindBy(how = How.XPATH, using = "//h2[contains(@class,'MuiTypography-root')]")
 	public WebElement modalDialogTitle;
 	
 	@FindBy(how = How.XPATH, using = "//label[contains(text(),'Category Name')]//following-sibling::div[1]//input")
 	public WebElement modalCategoryName;
-
+	
+	@FindBy(how = How.ID, using = "category_image_input_0")
+	public WebElement modalCategoryImage;
+	
+	@FindBy(how = How.XPATH, using = "//label[contains(text(),'Search')]//following-sibling::div/input")
+	public WebElement modalGlobalTaxonomy;
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'SAVE')]")
+	public WebElement save;
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Save')]")
+	public WebElement saveproduct;
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Publish')]")
+	public WebElement publishproduct;
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'CLOSE')]")
+	public WebElement close;
+	
 	public ProductPageObj(WebDriver driver) {
 		super(driver);
 		this.driver=driver;

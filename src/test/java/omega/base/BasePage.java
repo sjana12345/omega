@@ -30,6 +30,32 @@ public class BasePage {
 		actions = new Actions(driver);
 	}
 
+	public void click(By by) {
+		waitforExistence(by).click();
+	}
+
+	public void click(WebElement element) {
+		element.click();
+	}
+
+	public void sendvalue(WebElement element, String text, Boolean clear) {
+		if (clear) {
+			element.clear();
+		}
+		element.sendKeys(text);
+	}
+
+	public void sendvalue(By by, String text, Boolean clear) {
+		if (clear) {
+			waitforExistence(by).clear();
+		}
+		waitforExistence(by).sendKeys(text);
+	}
+
+	public void readText(WebElement element) {
+		element.getText();
+	}
+	
 	// Click Method
 	public void waitandClick(By by) {
 		waitforExistence(by).click();
@@ -73,6 +99,15 @@ public class BasePage {
 	public void actionClick(WebElement element) {
 		actions.click(element).perform();
 	}
+	
+	public void wait(int sec) {
+		try {
+			Thread.sleep(sec*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	public void writeTextAction(WebElement element, String text) {
 		switch (text) {
@@ -95,7 +130,6 @@ public class BasePage {
 		default:
 			break;
 		}
-		
 	}
 
 	public By getlocator(WebElement element) {
