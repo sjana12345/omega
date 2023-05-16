@@ -22,6 +22,7 @@ public class LoginPage extends CommonPageObj {
 					"Enter account details to manage or create your online business");
 			if (loginFieldsContainer.isDisplayed()) {
 				sendvalue(getlocator(mobileNumber), "8910682813",true);
+				waitandWriteText(getlocator(mobileNumber), "8910682813");
 				return true;
 			}
 		}
@@ -32,6 +33,8 @@ public class LoginPage extends CommonPageObj {
 		if (enterMobileNumber()) {
 			click(getlocator(toggleLogin));
 			sendvalue(getlocator(password), "12345678", true);
+			waitandClick(getlocator(toggleLogin));
+			waitandWriteText(getlocator(password), "12345678");
 			return true;
 		}
 		return false;
@@ -39,6 +42,7 @@ public class LoginPage extends CommonPageObj {
 
 	public Boolean performLogin() {
 		click(getlocator(loginButton));
+		waitandClick(getlocator(loginButton));
 		return true;
 	}
 

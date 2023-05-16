@@ -1,9 +1,11 @@
 package omega.functional.product.pageaction;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -30,7 +32,6 @@ public class ProductPage extends ProductPageObj {
 		}
 		return false;
 	}
-
 	public void categoryModalOperation(String categoryname, String taxonomy) {
 		wait(4);
 		sendvalue(modalCategoryName, categoryname, true);
@@ -63,22 +64,19 @@ public class ProductPage extends ProductPageObj {
 			}
 		}
 	}
-
+      
 	public void createCustomProduct() {
 		if (validateManageProductPage()) {
-			wait(4);
-			waitforExistence(getlocator(addProductBtn));
-			click(getlocator(addProductBtn));
-			waitforExistence(getlocator(addCustomProduct));
-			click(getlocator(addCustomProduct));
+			waitandClick(getlocator(addProductBtn));
+			sleep(50);
+			waitandClick(getlocator(addCustomProduct));
 			waitforExistence(getlocator(addProductHeader));
-			click(getlocator(addProductHeader));
-			waitforExistence(getlocator(productnameField));
-			sendvalue(getlocator(productnameField), "10", true);
-			sendvalue(getlocator(mrpField), "10", true);
-			sendvalue(getlocator(sellingpriceField), "10", true);
-			sendvalue(getlocator(productunitField), "1", true);
-			click(getlocator(productselectunitButton));
+			sleep(50);
+			waitandWriteText(getlocator(productnameField), "10");
+			waitandWriteText(getlocator(mrpField), "10");
+			waitandWriteText(getlocator(sellingpriceField), "10");
+			waitandWriteText(getlocator(productunitField), "1");
+			waitandClick(getlocator(productselectunitButton));
 			List<WebElement> ele = getListofElements(getlocator(productselectunitOptions));
 			ele.stream().forEach(a -> {
 				try {

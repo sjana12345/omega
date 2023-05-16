@@ -56,6 +56,31 @@ public class BasePage {
 		element.getText();
 	}
 	
+	// Click Method
+	public void waitandClick(By by) {
+		waitforExistence(by).click();
+	}
+
+	public void navigate(WebElement element) {
+		element.click();
+	}
+
+	public void writeText(WebElement element, String text) {
+		element.sendKeys(text);
+	}
+
+	@SuppressWarnings("deprecation")
+	public void wait(int sec) {
+		driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
+	}
+
+	// Write Text
+	public void waitandWriteText(By by, String text) {
+		waitforExistence(by).clear();
+		waitforExistence(by).sendKeys(text);
+	}
+
+	// Read Text
 	public String readText(By by) {
 		return waitforExistence(by).getText();
 	}
@@ -105,7 +130,6 @@ public class BasePage {
 		default:
 			break;
 		}
-
 	}
 
 	public By getlocator(WebElement element) {
