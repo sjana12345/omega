@@ -11,14 +11,10 @@
 			<class name="omega.functional.login.scripts.TestScript001" />
 		</classes>
 	</test>
-	<test name="Scenario 2">
+	
+	<test name="Scenario 4">
 		<classes>
-			<class name="omega.functional.login.scripts.TestScript002" />
-		</classes>
-	</test>
-	<test name="Scenario 3">
-		<classes>
-			<class name="omega.functional.login.scripts.TestScript003" />
+			<class name="omega.functional.sellerdashboard.dasbord.script.TestScript002" />
 		</classes>
 	</test>
 </suite>
