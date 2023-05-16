@@ -26,21 +26,14 @@ public class TestScript002 extends BaseTest {
 			e.printStackTrace();
 		}
 		
-		home.click();
+		/*home.click();
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
-		home.click();
-		try {
-			Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
 		home.verifySales();
 		try {
