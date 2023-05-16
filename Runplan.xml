@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Omega Suite">
-  <test name="Login Scenario">
-      <classes>
-      <class name="omega.functional.login.scripts.TestScript001"/>
-      </classes>
-  </test>
-</suite> <!-- Suite -->
+	<listeners>
+		<listener class-name="omega.utils.listener.TestListener" />
+		<listener class-name="omega.utils.listener.AnnotationTransformer" />
+	</listeners>
+
+	<test name="Scenario 1">
+		<classes>
+			<class name="omega.functional.login.scripts.TestScript001" />
+		</classes>
+	</test>
+	<test name="Scenario 2">
+		<classes>
+			<class name="omega.functional.login.scripts.TestScript002" />
+		</classes>
+	</test>
+	<test name="Scenario 3">
+		<classes>
+			<class name="omega.functional.login.scripts.TestScript003" />
+		</classes>
+	</test>
+</suite>

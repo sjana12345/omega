@@ -1,14 +1,9 @@
 package omega.functional.login.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.testng.Reporter;
-
-import omega.base.BaseSettings;
 import omega.functional.login.pageobjects.CataloguePageObj;
-import omega.utils.SeGenericFunctions;
 
 public class CataloguePage extends CataloguePageObj {
 
