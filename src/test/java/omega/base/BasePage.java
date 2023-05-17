@@ -69,12 +69,6 @@ public class BasePage {
 		element.sendKeys(text);
 	}
 
-	@SuppressWarnings("deprecation")
-	public void wait(int sec) {
-		driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
-	}
-
-	// Write Text
 	public void waitandWriteText(By by, String text) {
 		waitforExistence(by).clear();
 		waitforExistence(by).sendKeys(text);
