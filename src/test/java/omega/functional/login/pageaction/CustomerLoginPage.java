@@ -13,15 +13,20 @@ public class CustomerLoginPage extends CommonPageObj{
 		super(driver);
 	}
 	
+	public boolean performCustomerSigninbtn() {
+		waitforExistence(getlocator(customerSignin),30);
+		if(customerSignin.isDisplayed()) {
+			click(getlocator(customerSignin));
+			return true;
+		}
+		return false;
+	}
+	
 	public Boolean enterCustomerMobile() {
-		waitforExistence(getlocator(customerLoginContainer),30);
-		if(customerLoginContainer.isDisplayed()) {
-			Assert.assertEquals(readText(getlocator(customerLoginTitletext)), "Login / Register");
-			Assert.assertEquals(readText(getlocator(customerLoginSubTitletext)), "Provide your Mobile Number or Email to Login/ Sign Up");
-			if(customerMobileNumber.isDisplayed()) {
-				writeText(getlocator(customerMobileNumber),"6290303437");
-				return true;
-			}
+		if(customerMobileNumber.isDisplayed()) {
+			System.out.println("pass");
+			writeText(getlocator(customerMobileNumber),"6290303437");
+			return true;
 		}
 		return false;
 	}

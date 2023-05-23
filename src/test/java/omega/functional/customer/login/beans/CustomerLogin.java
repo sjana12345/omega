@@ -14,7 +14,7 @@ public class CustomerLogin {
 	CustomerLoginPage clogin= new CustomerLoginPage(BaseTest.driver);
 	
 	public void performCustomerLogin() {
-		if(clogin.enterCustomerMobile()&& clogin.enterOTP() && clogin.performCustomerLogin() ) {
+		if(clogin.performCustomerSigninbtn() && clogin.enterCustomerMobile() && clogin.performCustomerLogin() && clogin.enterOTP() ) {
 			ExtentTestManager.getTest().log(Status.PASS, "Successfully Logged in");
 		}
 		else {

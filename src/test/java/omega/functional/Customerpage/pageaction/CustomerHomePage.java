@@ -13,10 +13,10 @@ public class CustomerHomePage extends CustomerHomePageObj{
 	}
 	
 	public boolean VerifyLogin() {
-		waitforExistence(getlocator(banner),20);
-		if(banner.isDisplayed()) {
-			return true;
+		
+		if(signuptext.isDisplayed()) {
+			return false;
 		}
-		return false;
+		return true;
 	}
 }

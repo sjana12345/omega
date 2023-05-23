@@ -35,6 +35,7 @@ public class CommonPageObj extends BasePage{
 	@FindBy(how = How.XPATH, using = "//img")
 	public WebElement img;
 	
+	//Customer Page Object
 	@FindBy(how= How.XPATH, using="//div[@class='MuiBox-root jss26 jss1']")
 	public WebElement customerLoginContainer;
 	@FindBy(how= How.XPATH, using="//h4[@class='MuiTypography-root MuiTypography-h4 jss4']")
@@ -48,7 +49,7 @@ public class CommonPageObj extends BasePage{
 	@FindBy(how= How.XPATH, using= "//input[@placeholder='Enter your name']")
 	public WebElement customerName;
 	
-	@FindBy(how= How.XPATH, using="//*[@id=\"custom-scroll main_body\"]/div[7]/div[3]/div/div[2]/div/div/div[2]/div[3]/div/button")
+	@FindBy(how= How.XPATH, using="//span[text()='Continue']")
 	public WebElement customerLoginbtn;
 	
 	

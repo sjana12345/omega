@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -27,6 +28,10 @@ public class BasePage {
     //Write Text
     public void writeText(By by, String text) {
     	waitforExistence(by).sendKeys(text);
+    }
+    
+    public void writeTextkeybord(By by, String text) {
+    	waitforExistence(by).sendKeys(text, Keys.ENTER);
     }
 
     //Read Text

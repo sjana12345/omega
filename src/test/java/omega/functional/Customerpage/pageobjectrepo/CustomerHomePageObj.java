@@ -13,8 +13,8 @@ public class CustomerHomePageObj extends BasePage{
 	WebDriver driver;
 	BaseTest test;
 	
-	@FindBy(how= How.XPATH,using= "//div[@class='banner_grid']/div/img")
-	public WebElement banner;
+	@FindBy(how= How.XPATH,using= "//p[text()='Sign In']")
+	public WebElement signuptext;
 	
 	public CustomerHomePageObj(WebDriver driver) {
 		super(driver);
